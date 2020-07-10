@@ -4,8 +4,11 @@ class SessionsController < ApplicationController
 
   def create
     if params[:name] && params[:name].present?
-    session[:name]= params[:name]
-    redirect_to login_path
+      session[:name]= params[:name]
+      redirect_to root
+    else
+      redirect_to login_path
+    end
   end
 
   def destroy
