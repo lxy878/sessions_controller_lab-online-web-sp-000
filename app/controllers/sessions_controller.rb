@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     c=""
-    raise c.precent?
+    raise c.present?
     session[:name]= params[:name]
     redirect_to login_path
   end
