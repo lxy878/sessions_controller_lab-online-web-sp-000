@@ -3,8 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    c=""
-    raise c.present?
+    if params[:name] && params[:name].present?
     session[:name]= params[:name]
     redirect_to login_path
   end
