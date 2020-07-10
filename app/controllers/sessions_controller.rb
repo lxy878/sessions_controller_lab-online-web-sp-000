@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     raise params.inspect
+    session[:name]= params[:name]
   end
 
   def destroy
