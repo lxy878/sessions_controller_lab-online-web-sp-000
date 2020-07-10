@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    raise params.inspect
     session[:name]= params[:name]
   end
 
